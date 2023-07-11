@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import Post from "./post";
+import {createTheme, Grid, Theme, ThemeProvider} from "@mui/material";
+import theme from "./assets/theme/theme";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [name, setName] = useState<string | null>("")
+    return (
+        <ThemeProvider theme={theme}>
+            <Grid bgcolor={(theme:Theme)=>theme.palette.info.main}>
+                <Post/>
+            </Grid>
+        </ThemeProvider>
+    );
 }
 
 export default App;
