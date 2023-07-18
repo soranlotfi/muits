@@ -39,7 +39,7 @@ const baseDisplayProperties = {
 
 const typography:TypographyOptions = {
     fontFamily: baseProperties.fontFamily,
-    // fontWeightLighter: baseProperties.fontWeightLighter,
+    fontWeightLighter: baseProperties.fontWeightLighter,
     fontWeightLight: baseProperties.fontWeightLight,
     fontWeightRegular: baseProperties.fontWeightRegular,
     fontWeightMedium: baseProperties.fontWeightMedium,
